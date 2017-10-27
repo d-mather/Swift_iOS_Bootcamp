@@ -1,0 +1,6 @@
+framework module dmather2017 {
+  umbrella header "dmather2017-umbrella.h"
+
+  export *
+  module * { export * }
+}

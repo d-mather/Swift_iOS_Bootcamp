@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'dmather2017_Example' do
+  pod 'dmather2017', :path => '../'
+
+  target 'dmather2017_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end

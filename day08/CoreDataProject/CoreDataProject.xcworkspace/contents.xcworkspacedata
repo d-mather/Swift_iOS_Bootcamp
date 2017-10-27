@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:/goinfre/dmather/Desktop/swift_bootcamp/day08/CoreDataProject/Article.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/goinfre/dmather/Desktop/swift_bootcamp/day08/CoreDataProject/Article+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
+      location = "group:CoreDataProject.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
