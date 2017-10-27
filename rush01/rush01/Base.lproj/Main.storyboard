@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Y2v-JW-WJ7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--WTC_ Maps-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="rush01" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Vze-Vn-8zX">
+                                <rect key="frame" x="0.0" y="64" width="375" height="88"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="OVE-ZP-GA7">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="q0O-xK-uoB"/>
+                                        </connections>
+                                    </searchBar>
+                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="cNd-AY-21g">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="xiD-nt-NOr"/>
+                                        </connections>
+                                    </searchBar>
+                                </subviews>
+                            </stackView>
+                            <searchBar contentMode="redraw" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWb-x6-bMO">
+                                <rect key="frame" x="0.0" y="242" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3bR-6z-XKW"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vze-Vn-8zX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="3O0-i0-6eh"/>
+                            <constraint firstAttribute="trailing" secondItem="Vze-Vn-8zX" secondAttribute="trailing" id="QLb-eI-npX"/>
+                            <constraint firstItem="Vze-Vn-8zX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XVb-Vc-Qhl"/>
+                            <constraint firstAttribute="trailing" secondItem="lWb-x6-bMO" secondAttribute="trailing" id="aoH-rV-xtc"/>
+                            <constraint firstItem="lWb-x6-bMO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dF7-GK-YU4"/>
+                            <constraint firstItem="lWb-x6-bMO" firstAttribute="top" secondItem="Vze-Vn-8zX" secondAttribute="bottom" constant="-88" id="gnr-zA-bBR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="WTC_ Maps" id="9Zx-M6-GY4">
+                        <barButtonItem key="leftBarButtonItem" id="DUy-Vt-bY6">
+                            <connections>
+                                <action selector="navButtonClicked:" destination="BYZ-38-t0r" id="bNt-cg-zpz"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" id="rZ4-EW-mCt">
+                            <connections>
+                                <action selector="searchButtonClicked:" destination="BYZ-38-t0r" id="viE-VT-QNb"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navButton" destination="DUy-Vt-bY6" id="m4t-vO-v9p"/>
+                        <outlet property="searchBox1" destination="OVE-ZP-GA7" id="zP0-ly-7Ha"/>
+                        <outlet property="searchBox2" destination="cNd-AY-21g" id="qhl-UZ-4qu"/>
+                        <outlet property="searchBox3" destination="lWb-x6-bMO" id="RnE-Ug-oOV"/>
+                        <outlet property="searchButton" destination="rZ4-EW-mCt" id="gSa-3K-l3W"/>
+                        <outlet property="searchDisplayController" destination="BHD-Ye-DDf" id="7nr-Fs-e6k"/>
+                        <outlet property="searchStack" destination="Vze-Vn-8zX" id="b7M-hc-OCh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="BHD-Ye-DDf">
+                    <connections>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="ko9-7h-OX4"/>
+                        <outlet property="searchContentsController" destination="BYZ-38-t0r" id="egS-jD-D3U"/>
+                        <outlet property="searchResultsDataSource" destination="BYZ-38-t0r" id="n6w-6X-kUH"/>
+                        <outlet property="searchResultsDelegate" destination="BYZ-38-t0r" id="A8y-ee-SM6"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1069.5999999999999" y="696.7016491754124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TF4-bd-RaS">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y2v-JW-WJ7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ldw-2q-fbm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5eV-Id-Nia"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oJ2-Of-mS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="80.799999999999997" y="696.7016491754124"/>
+        </scene>
+    </scenes>
+</document>
